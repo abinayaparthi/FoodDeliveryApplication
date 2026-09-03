@@ -1,0 +1,11 @@
+package com.example.swiggy.dao;
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.swiggy.entity.*;
+public interface UserRepo extends JpaRepository<User,Integer>{
+
+	Optional<User> findByName(String name);
+	
+}
